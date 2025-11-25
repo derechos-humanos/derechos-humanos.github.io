@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Главная</title>
+    <meta name="description" content="Многоязычный блог о правах человека">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="brand">
+            <span>Блог</span>
+        </a>
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">меню</label>
+        <div class="menu">
+            {% for language in languages %}
+            <a href="../{{ language }}/index.html" class="{% if language == lang %}active{% endif %}">
+                {% if language == "es" %}Español{% elif language == "en" %}English{% elif language == "ru" %}Русский{%
+                endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </nav>
+
+    <main class="flex one two-600 three-900">
+        <div class="full">
+            <header class="hero">
+                <h1>Добро пожаловать в блог</h1>
+                <p>Статьи о правах человека, социальной справедливости и многом другом</p>
+            </header>
+
+            {% if posts %}
+            <section class="posts-list">
+                {% for post in posts %}
+                <article class="card post-preview">
+                    <header>
+                        <h2><a href="{{ post.url }}">{{ post.metadata.title }}</a></h2>
+                        <p class="post-meta">
+                            {% if post.metadata.author %}
+                            <span class="author">{{ post.metadata.author }}</span> •
+                            {% endif %}
+                            <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
+                        </p>
+                    </header>
+                    {% if post.metadata.description %}
+                    <div class="content">
+                        <p>{{ post.metadata.description }}</p>
+                    </div>
+                    {% endif %}
+                    <footer>
+                        <a href="{{ post.url }}" class="button">Читать далее →</a>
+                    </footer>
+                </article>
+                {% endfor %}
+            </section>
+            {% else %}
+            <div class="card">
+                <p>В настоящее время статьи недоступны.</p>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Многоязычный блог на Polysite</p>
+    </footer>
+</body>
+
+</html>

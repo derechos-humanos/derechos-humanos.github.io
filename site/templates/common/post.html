@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.metadata.title }}</title>
+    <meta name="description" content="{{ post.metadata.description }}">
+    <meta name="author" content="{{ post.metadata.author }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="brand">
+            <span>Blog</span>
+        </a>
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">menu</label>
+        <div class="menu">
+            {% for language in languages %}
+            <a href="../{{ language }}/index.html" class="{% if language == lang %}active{% endif %}">
+                {% if language == "es" %}Español{% elif language == "en" %}English{% elif language == "ru" %}Русский{%
+                endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </nav>
+
+    <main class="flex one two-600 three-900">
+        <div class="full">
+            <article class="card">
+                <header>
+                    <h1>{{ post.metadata.title }}</h1>
+                    <p class="post-meta">
+                        {% if post.metadata.author %}
+                        <span class="author">{{ post.metadata.author }}</span> •
+                        {% endif %}
+                        <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
+                    </p>
+                </header>
+                <div class="content">
+                    {{ post.content | safe }}
+                </div>
+                <footer>
+                    <a href="index.html" class="button">
+                        {% if lang == "es" %}← Volver al inicio
+                        {% elif lang == "en" %}← Back to home
+                        {% elif lang == "ru" %}← Назад на главную
+                        {% endif %}
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            {% if lang == "es" %}
+            Blog multilingüe generado con Polysite
+            {% elif lang == "en" %}
+            Multilingual blog powered by Polysite
+            {% elif lang == "ru" %}
+            Многоязычный блог на Polysite
+            {% endif %}
+        </p>
+    </footer>
+</body>
+
+</html>
