@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Language / Seleccionar idioma / Выберите язык</title>
+    <link rel="stylesheet" href="css/matcha.css">
+</head>
+
+<body>
+    <header>
+        <h1>&#127482;&#127475;</h1>
+        <p>Human Rights Blog</p>
+    </header>
+    <main>
+        <section>
+            <h2>Select Language / Seleccionar idioma / Выберите язык</h2>
+            <nav>
+                <ul>
+                    {% for language in languages %}
+                    <li>
+                        <a href="{{ language }}/index.html">{{ lang_names[language] }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </section>
+    </main>
+</body>
+
+</html>

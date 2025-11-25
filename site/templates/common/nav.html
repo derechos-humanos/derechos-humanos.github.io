@@ -1,0 +1,20 @@
+<nav>
+    <menu>
+        <li>
+            <a href="index.html">&#127482;&#127475;</a>
+        </li>
+        {% for language in languages %}
+        <li>
+            <a href="../{{ language }}/index.html" {% if language==lang %}aria-current="page" {% endif %}>
+                {% if language == "es" %}
+                Español
+                {% elif language == "en" %}
+                English
+                {% elif language == "ru" %}
+                Русский
+                {% endif %}
+            </a>
+        </li>
+        {% endfor %}
+    </menu>
+</nav>

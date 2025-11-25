@@ -26,6 +26,7 @@
             rustc
             rustfmt
             license-generator
+            djlint
           ];
         };
         mkRustPkg = pkg:

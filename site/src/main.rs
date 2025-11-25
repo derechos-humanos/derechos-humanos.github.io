@@ -41,7 +41,8 @@ fn main() -> Result<()> {
     }
 
     copy_static_files()?;
-    create_language_selector()?;
+    copy_static_files()?;
+    create_language_selector(&tera)?;
 
     println!("✓ Site built successfully in _site/");
     Ok(())
@@ -180,7 +181,7 @@ fn copy_static_files() -> Result<()> {
     Ok(())
 }
 
-fn create_language_selector() -> Result<()> {
+fn create_language_selector(tera: &Tera) -> Result<()> {
     let lang_names: HashMap<&str, &str> = [
         ("es", "Español"),
         ("en", "English"),
@@ -190,43 +191,13 @@ fn create_language_selector() -> Result<()> {
     .copied()
     .collect();
 
-    let html = format!(
-        r#"<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Language / Seleccionar idioma / Выберите язык</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <link rel="stylesheet" href="css/custom.css">
-</head>
-<body>
-    <main class="flex one two-600 three-900">
-        <div class="full center">
-            <article class="card">
-                <header>
-                    <h1>Select Language</h1>
-                    <h2>Seleccionar idioma</h2>
-                    <h3>Выберите язык</h3>
-                </header>
-                <div class="content">
-                    {}
-                </div>
-            </article>
-        </div>
-    </main>
-</body>
-</html>"#,
-        LANGUAGES
-            .iter()
-            .map(|lang| format!(
-                r#"<a href="{}/index.html" class="button">{}</a>"#,
-                lang,
-                lang_names.get(lang).unwrap_or(&lang)
-            ))
-            .collect::<Vec<_>>()
-            .join("\n                    ")
-    );
+    let mut context = TeraContext::new();
+    context.insert("languages", &LANGUAGES);
+    context.insert("lang_names", &lang_names);
+
+    let html = tera
+        .render("index.html", &context)
+        .context("Failed to render root index template")?;
 
     fs::write("_site/index.html", html)?;
     Ok(())
