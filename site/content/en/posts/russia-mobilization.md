@@ -2,7 +2,7 @@
 {
   "title": "Russian Federation – Partial Mobilization & Draft Evasion Penalties",
   "date": "2025-11-22",
-  "author": "Derechos Humanos",
+  "author": "Anonymous Journalist",
   "description": "Details on partial mobilization and draft evasion penalties in the Russian Federation"
 }
 ---

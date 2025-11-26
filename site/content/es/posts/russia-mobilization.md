@@ -2,7 +2,7 @@
 {
   "title": "Federación Rusa – Movilización Parcial y Sanciones por Evasión del Servicio Militar",
   "date": "2025-11-22",
-  "author": "Derechos Humanos",
+  "author": "Periodista Anónimo",
   "description": "Detalles sobre la movilización parcial y las sanciones por evasión del servicio militar en la Federación Rusa"
 }
 ---

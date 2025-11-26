@@ -2,7 +2,7 @@
 {
   "title": "Republic of Estonia – Restrictions on Russian Nationals & Impacts on Ethnic Russians",
   "date": "2025-11-23",
-  "author": "Derechos Humanos",
+  "author": "Anonymous Journalist",
   "description": "Overview of restrictions on Russian nationals in Estonia and their impact on ethnic Russians"
 }
 ---
