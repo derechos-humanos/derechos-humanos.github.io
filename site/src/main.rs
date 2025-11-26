@@ -254,6 +254,12 @@ fn render_post(
     context.insert("lang", lang);
     context.insert("languages", &LANGUAGES);
 
+    let footer_qr = generate_qr_svg(
+        "https://derechos-humanos.github.io",
+    )
+    .unwrap_or_default();
+    context.insert("footer_qr", &footer_qr);
+
     let html = tera
         .render("common/post.html", &context)
         .context("Failed to render post template")?;
@@ -285,6 +291,12 @@ fn render_index(
     context.insert("lang", lang);
     context.insert("languages", &LANGUAGES);
     context.insert("content", &content);
+
+    let footer_qr = generate_qr_svg(
+        "https://derechos-humanos.github.io",
+    )
+    .unwrap_or_default();
+    context.insert("footer_qr", &footer_qr);
 
     let html = tera
         .render("index.html", &context)
