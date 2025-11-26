@@ -1,3 +1,12 @@
+---
+{
+  "title": "Republic of Estonia – Restrictions on Russian Nationals & Impacts on Ethnic Russians",
+  "date": "2025-11-23",
+  "author": "Derechos Humanos",
+  "description": "Overview of restrictions on Russian nationals in Estonia and their impact on ethnic Russians"
+}
+---
+
 # Republic of Estonia – Restrictions on Russian Nationals & Impacts on Ethnic Russians
 
 ## Key Laws & Decrees (Enforcing Entry and Activity Restrictions)
