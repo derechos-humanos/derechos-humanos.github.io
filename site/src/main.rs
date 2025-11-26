@@ -1,7 +1,5 @@
 use anyhow::{Context, Result};
-use base64::{Engine as _, engine::general_purpose};
 use chrono::NaiveDate;
-use image::Luma;
 use pulldown_cmark::{Options, Parser, html};
 use qrcode::QrCode;
 use serde::{Deserialize, Serialize};
@@ -139,24 +137,38 @@ fn extract_frontmatter(
     Ok((metadata, parts[2].trim().to_string()))
 }
 
-fn generate_qr_base64(url: &str) -> Result<String> {
+const QR_SIZE: usize = 160;
+
+fn generate_qr_svg(url: &str) -> Result<String> {
     let code = QrCode::new(url.as_bytes())
         .context("Failed to generate QR code")?;
 
-    let image = code
-        .render::<Luma<u8>>()
-        .min_dimensions(100, 100)
-        .build();
+    let qr_matrix = code.to_colors();
+    let width = code.width();
+    let cell_size = QR_SIZE / width;
+    let svg_size = cell_size * width;
 
-    let mut png_data = Vec::new();
-    image::DynamicImage::ImageLuma8(image)
-        .write_to(
-            &mut std::io::Cursor::new(&mut png_data),
-            image::ImageFormat::Png,
-        )
-        .context("Failed to encode QR code as PNG")?;
+    let mut svg = format!(
+        r#"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {} {}" width="{}" height="{}">"#,
+        svg_size, svg_size, QR_SIZE, QR_SIZE
+    );
 
-    Ok(general_purpose::STANDARD.encode(&png_data))
+    for (y, row) in qr_matrix.chunks(width).enumerate() {
+        for (x, &color) in row.iter().enumerate() {
+            if color == qrcode::Color::Dark {
+                svg.push_str(&format!(
+                    r#"<rect x="{}" y="{}" width="{}" height="{}"/>"#,
+                    x * cell_size,
+                    y * cell_size,
+                    cell_size,
+                    cell_size
+                ));
+            }
+        }
+    }
+
+    svg.push_str("</svg>");
+    Ok(svg)
 }
 
 fn process_markdown_with_qr<'a>(
@@ -184,14 +196,15 @@ fn process_markdown_with_qr<'a>(
             Event::End(TagEnd::Link) => {
                 events.push(event);
                 if let Some(url) = current_link.take() {
-                    if let Ok(qr_base64) =
-                        generate_qr_base64(&url)
+                    if let Ok(qr_svg) =
+                        generate_qr_svg(&url)
                     {
                         events.push(Event::Html(
                             format!(
-                                "<br><img src=\"data:image/png;base64,{}\" alt=\"QR\" class=\"width:100px;height:100px;\"><br>",
-                                qr_base64
-                            ).into()
+                                r#"<br>{}<br>"#,
+                                qr_svg
+                            )
+                            .into(),
                         ));
                     }
                 }
