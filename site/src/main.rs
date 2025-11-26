@@ -47,8 +47,7 @@ fn main() -> Result<()> {
     }
 
     copy_static_files()?;
-    copy_static_files()?;
-    create_language_selector(&tera)?;
+    create_index_redirect()?;
 
     println!("✓ Site built successfully in _site/");
     Ok(())
@@ -247,7 +246,7 @@ fn copy_static_files() -> Result<()> {
     Ok(())
 }
 
-fn create_language_selector(_tera: &Tera) -> Result<()> {
+fn create_index_redirect() -> Result<()> {
     let redirect_html = r#"<!DOCTYPE html>
 <html lang="es">
 <head>
