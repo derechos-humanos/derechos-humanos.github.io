@@ -1,6 +1,9 @@
 use anyhow::{Context, Result};
+use base64::{Engine as _, engine::general_purpose};
 use chrono::NaiveDate;
+use image::Luma;
 use pulldown_cmark::{Options, Parser, html};
+use qrcode::QrCode;
 use serde::{Deserialize, Serialize};
 use std::{
     fs,
@@ -101,8 +104,7 @@ fn parse_post(path: &Path, _lang: &str) -> Result<Post> {
     options.insert(Options::ENABLE_TABLES);
 
     let parser = Parser::new_ext(&markdown, options);
-    let mut html_content = String::new();
-    html::push_html(&mut html_content, parser);
+    let html_content = process_markdown_with_qr(parser)?;
 
     let slug = path
         .file_stem()
@@ -135,6 +137,71 @@ fn extract_frontmatter(
             .context("Failed to parse frontmatter")?;
 
     Ok((metadata, parts[2].trim().to_string()))
+}
+
+fn generate_qr_base64(url: &str) -> Result<String> {
+    let code = QrCode::new(url.as_bytes())
+        .context("Failed to generate QR code")?;
+
+    let image = code
+        .render::<Luma<u8>>()
+        .min_dimensions(100, 100)
+        .build();
+
+    let mut png_data = Vec::new();
+    image::DynamicImage::ImageLuma8(image)
+        .write_to(
+            &mut std::io::Cursor::new(&mut png_data),
+            image::ImageFormat::Png,
+        )
+        .context("Failed to encode QR code as PNG")?;
+
+    Ok(general_purpose::STANDARD.encode(&png_data))
+}
+
+fn process_markdown_with_qr<'a>(
+    parser: Parser<'a>,
+) -> Result<String> {
+    use pulldown_cmark::{Event, Tag, TagEnd};
+
+    let mut html_output = String::new();
+    let mut events = Vec::new();
+    let mut current_link: Option<String> = None;
+
+    for event in parser {
+        match &event {
+            Event::Start(Tag::Link {
+                dest_url, ..
+            }) => {
+                let url = dest_url.to_string();
+                if url.starts_with("http://")
+                    || url.starts_with("https://")
+                {
+                    current_link = Some(url);
+                }
+                events.push(event);
+            }
+            Event::End(TagEnd::Link) => {
+                events.push(event);
+                if let Some(url) = current_link.take() {
+                    if let Ok(qr_base64) =
+                        generate_qr_base64(&url)
+                    {
+                        events.push(Event::Html(
+                            format!(
+                                "<br><img src=\"data:image/png;base64,{}\" alt=\"QR\" class=\"width:100px;height:100px;\"><br>",
+                                qr_base64
+                            ).into()
+                        ));
+                    }
+                }
+            }
+            _ => events.push(event),
+        }
+    }
+
+    html::push_html(&mut html_output, events.into_iter());
+    Ok(html_output)
 }
 
 fn load_index_content(lang: &str) -> Result<IndexContent> {

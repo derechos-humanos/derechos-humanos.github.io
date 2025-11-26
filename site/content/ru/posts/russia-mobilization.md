@@ -17,11 +17,11 @@
 
 - Федеральный закон № 31-ФЗ (26 февраля 1997 года) – Правовая основа для частичной/полной мобилизации без согласия [http://www.kremlin.ru/acts/bank/10602](http://www.kremlin.ru/acts/bank/10602)
 
-- Указ Президента № 647 (21 сентября 2022 года) – Объявляет частичную мобилизацию (все еще действует) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) | [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
+- Указ Президента № 647 (21 сентября 2022 года) – Объявляет частичную мобилизацию (все еще действует) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
 
 - Федеральный закон № 127-ФЗ (14 апреля 2023 года) – Запрет на выезд, управление транспортными средствами, замораживание имущества, отказ в кредитах после игнорирования повестки [http://publication.pravo.gov.ru/Document/View/0001202304140051](http://publication.pravo.gov.ru/Document/View/0001202304140051)
 
-- Федеральный закон № 365-ФЗ (24 сентября 2022 года) – До 10 лет тюрьмы за уклонение от призыва в период мобилизации (ст. 328 УК РФ) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) | [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
+- Федеральный закон № 365-ФЗ (24 сентября 2022 года) – До 10 лет тюрьмы за уклонение от призыва в период мобилизации (ст. 328 УК РФ) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
 
 ## Международная критика и элементы принуждения
 

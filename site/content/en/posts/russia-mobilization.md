@@ -3,7 +3,7 @@
   "title": "Russian Federation – Partial Mobilization & Draft Evasion Penalties",
   "date": "2025-11-22",
   "author": "Anonymous Journalist",
-  "description": "Details on partial mobilization and draft evasion penalties in the Russian Federation"
+  "description": "Details on partial mobilization and draft evasion penalties in the Russian Federation",
 }
 ---
 
@@ -17,11 +17,11 @@
 
 - Federal Law № 31-FZ (26 Feb 1997) – Legal basis for partial/full mobilization without consent [http://www.kremlin.ru/acts/bank/10602](http://www.kremlin.ru/acts/bank/10602)
 
-- Presidential Decree № 647 (21 Sep 2022) – Declares partial mobilization (still active) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) | [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
+- Presidential Decree № 647 (21 Sep 2022) – Declares partial mobilization (still active) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
 
 - Federal Law № 127-FZ (14 Apr 2023) – Travel ban, driving ban, property freeze, loan denial after ignoring summons [http://publication.pravo.gov.ru/Document/View/0001202304140051](http://publication.pravo.gov.ru/Document/View/0001202304140051)
 
-- Federal Law № 365-FZ (24 Sep 2022) – Up to 10 years prison for draft evasion during mobilization (Criminal Code Art. 328) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) | [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
+- Federal Law № 365-FZ (24 Sep 2022) – Up to 10 years prison for draft evasion during mobilization (Criminal Code Art. 328) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
 
 ## International Criticism and Coercive Elements
 

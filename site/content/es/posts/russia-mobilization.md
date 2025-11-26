@@ -3,7 +3,7 @@
   "title": "Federación Rusa – Movilización Parcial y Sanciones por Evasión del Servicio Militar",
   "date": "2025-11-22",
   "author": "Periodista Anónimo",
-  "description": "Detalles sobre la movilización parcial y las sanciones por evasión del servicio militar en la Federación Rusa"
+  "description": "Detalles sobre la movilización parcial y las sanciones por evasión del servicio militar en la Federación Rusa",
 }
 ---
 
@@ -17,11 +17,11 @@
 
 - Ley Federal Nº 31-FZ (26 de febrero de 1997) – Base legal para la movilización parcial/total sin consentimiento [http://www.kremlin.ru/acts/bank/10602](http://www.kremlin.ru/acts/bank/10602)
 
-- Decreto Presidencial Nº 647 (21 de septiembre de 2022) – Declara la movilización parcial (aún activa) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) | [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
+- Decreto Presidencial Nº 647 (21 de septiembre de 2022) – Declara la movilización parcial (aún activa) [http://publication.pravo.gov.ru/Document/View/0001202209210001](http://publication.pravo.gov.ru/Document/View/0001202209210001) [http://www.kremlin.ru/acts/bank/48308](http://www.kremlin.ru/acts/bank/48308)
 
 - Ley Federal Nº 127-FZ (14 de abril de 2023) – Prohibición de viajar, prohibición de conducir, congelación de propiedades, denegación de préstamos después de ignorar la citación [http://publication.pravo.gov.ru/Document/View/0001202304140051](http://publication.pravo.gov.ru/Document/View/0001202304140051)
 
-- Ley Federal Nº 365-FZ (24 de septiembre de 2022) – Hasta 10 años de prisión por evasión del servicio militar durante la movilización (Código Penal Art. 328) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) | [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
+- Ley Federal Nº 365-FZ (24 de septiembre de 2022) – Hasta 10 años de prisión por evasión del servicio militar durante la movilización (Código Penal Art. 328) [http://publication.pravo.gov.ru/Document/View/0001202209240002](http://publication.pravo.gov.ru/Document/View/0001202209240002) [http://www.kremlin.ru/acts/bank/48322](http://www.kremlin.ru/acts/bank/48322)
 
 ## Crítica Internacional y Elementos Coercitivos
 
