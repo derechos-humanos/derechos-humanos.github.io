@@ -3,11 +3,9 @@
   "title": "República de Estonia – Restricciones a ciudadanos rusos e impactos en rusos étnicos",
   "date": "2025-11-23",
   "author": "Periodista Anónimo",
-  "description": "Resumen de las restricciones a los ciudadanos rusos en Estonia y su impacto en los rusos étnicos"
+  "description": "Resumen de las restricciones a los ciudadanos rusos en Estonia y su impacto en los rusos étnicos",
 }
 ---
-
-# República de Estonia – Restricciones a ciudadanos rusos e impactos en rusos étnicos
 
 ## Leyes y Decretos Clave (Aplicación de Restricciones de Entrada y Actividad)
 

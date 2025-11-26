@@ -7,10 +7,6 @@
 }
 ---
 
-# Federación Rusa – Movilización Parcial y Sanciones por Evasión del Servicio Militar
-
-(solo fuentes oficiales, al 22 de noviembre de 2025)
-
 ## Leyes y Decretos Clave (Aplicación del Servicio Obligatorio)
 
 - Ley Federal Nº 53-FZ (28 de marzo de 1998) – Deber militar obligatorio para todos los hombres, reservistas hasta 65+ [http://www.kremlin.ru/acts/bank/12128](http://www.kremlin.ru/acts/bank/12128)

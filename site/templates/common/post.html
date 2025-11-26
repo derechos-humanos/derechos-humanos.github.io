@@ -12,6 +12,13 @@
         {% include "common/nav.html" %}
         <main>
             <article>
+                <header>
+                    <h1>{{ post.metadata.title }}</h1>
+                    <p>
+                        {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> •{% endif %}
+                        <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
+                    </p>
+                </header>
                 {{ post.content | safe }}
                 <footer>
                     <a href="index.html">

@@ -7,8 +7,6 @@
 }
 ---
 
-# Republic of Estonia – Restrictions on Russian Nationals & Impacts on Ethnic Russians
-
 ## Key Laws & Decrees (Enforcing Entry and Activity Restrictions)
 
 - **18 Aug 2022 Regulation** – Bans visas for Russian citizens for tourism, business, study. Announced 15 Aug, enforced after only 3 days – arbitrary violation of freedom of movement and non-discrimination [http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august](http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august)

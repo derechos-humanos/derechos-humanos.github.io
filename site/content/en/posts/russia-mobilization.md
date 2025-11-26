@@ -7,10 +7,6 @@
 }
 ---
 
-# Russian Federation – Partial Mobilization & Draft Evasion Penalties
-
-(official sources only, as of 22 Nov 2025)
-
 ## Key Laws & Decrees (Enforcing Obligatory Service)
 
 - Federal Law № 53-FZ (28 Mar 1998) – Obligatory military duty for all men, reservists up to 65+ [http://www.kremlin.ru/acts/bank/12128](http://www.kremlin.ru/acts/bank/12128)
