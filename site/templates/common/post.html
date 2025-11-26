@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ post.metadata.title }}</title>
-    <meta name="description" content="{{ post.metadata.description }}">
-    <meta name="author" content="{{ post.metadata.author }}">
-    <link rel="stylesheet" href="../css/matcha.css">
-</head>
-
-<body>
-    {% include "common/nav.html" %}
-    <main>
-        <article>
-            <header>
-                <h1>{{ post.metadata.title }}</h1>
-                <p>
-                    {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> •{% endif %}
-                    <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
-                </p>
-            </header>
-            {{ post.content | safe }}
-            <footer>
-                <a href="index.html">
-                    {% if lang == "es" %}
-                    ← Volver al inicio
-                    {% elif lang == "en" %}
-                    ← Back to home
-                    {% elif lang == "ru" %}
-                    ← Назад на главную
-                    {% endif %}
-                </a>
-            </footer>
-        </article>
-    </main>
-    <section>
-        {% include "common/footer.html" %}
-    </section>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ post.metadata.title }}</title>
+        <meta name="description" content="{{ post.metadata.description }}">
+        <meta name="author" content="{{ post.metadata.author }}">
+        <link rel="stylesheet" href="../css/matcha.css">
+    </head>
+    <body>
+        {% include "common/nav.html" %}
+        <main>
+            <article>
+                {{ post.content | safe }}
+                <footer>
+                    <a href="index.html">
+                        {% if lang == "es" %}
+                            ← Volver al inicio
+                        {% elif lang == "en" %}
+                            ← Back to home
+                        {% elif lang == "ru" %}
+                            ← Назад на главную
+                        {% endif %}
+                    </a>
+                </footer>
+            </article>
+        </main>
+        <section>
+            {% include "common/footer.html" %}
+        </section>
+    </body>
 </html>
