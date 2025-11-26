@@ -4,7 +4,7 @@
             <a href="index.html">&#127482;&#127475;</a>
         </li>
         {% for language in languages %}
-            <li>
+            <li {% if language==lang %}class="selected"{% endif %}>
                 {% if post %}
                     <a href="../{{ language }}/{{ post.slug }}.html">
                     {% else %}

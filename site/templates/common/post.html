@@ -9,9 +9,7 @@
         <link rel="stylesheet" href="../css/matcha.css">
     </head>
     <body>
-        <header>
-            {% include "common/nav.html" %}
-        </header>
+        {% include "common/nav.html" %}
         <main>
             <article>
                 <header>
@@ -23,22 +21,20 @@
                 </header>
                 {{ post.content | safe }}
                 <footer>
-                    <nav>
-                        <a href="index.html">
-                            {% if lang == "es" %}
-                                ← Volver al inicio
-                            {% elif lang == "en" %}
-                                ← Back to home
-                            {% elif lang == "ru" %}
-                                ← Назад на главную
-                            {% endif %}
-                        </a>
-                    </nav>
+                    <a href="index.html">
+                        {% if lang == "es" %}
+                            ← Volver al inicio
+                        {% elif lang == "en" %}
+                            ← Back to home
+                        {% elif lang == "ru" %}
+                            ← Назад на главную
+                        {% endif %}
+                    </a>
                 </footer>
             </article>
         </main>
         <section>
-            <footer>
+            <footer class="centered muted">
                 {% if lang == "es" %}
                     Blog multilingüe generado con Polysite
                 {% elif lang == "en" %}
