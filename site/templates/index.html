@@ -10,13 +10,8 @@
 </head>
 
 <body>
-    <header>
-        {% include "common/nav.html" %}
-        <h1>{{ content.heading }}</h1>
-        <p>{{ content.subheading }}</p>
-    </header>
+    {% include "common/nav.html" %}
     <main>
-        {% if posts %}
         <section>
             {% for post in posts %}
             <article>
@@ -25,26 +20,23 @@
                         <a href="{{ post.url }}">{{ post.metadata.title }}</a>
                     </h2>
                     <p>
-                        {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> • {% endif %}
+                        {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> •{% endif %}
                         <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
                     </p>
                 </header>
-                {% if post.metadata.description %}
-                <p>{{ post.metadata.description }}</p>
-                {% endif %}
+                {% if post.metadata.description %}<p>{{ post.metadata.description }}</p>{% endif %}
                 <footer>
                     <a href="{{ post.url }}">{{ content.read_more }} →</a>
                 </footer>
             </article>
             {% endfor %}
         </section>
-        {% else %}
-        <p>{{ content.no_posts_message }}</p>
-        {% endif %}
     </main>
-    <footer>
-        <p><small>{{ content.footer_text }}</small></p>
-    </footer>
+    <section>
+        <footer>
+            {{ content.footer_text }}
+        </footer>
+    </section>
 </body>
 
 </html>

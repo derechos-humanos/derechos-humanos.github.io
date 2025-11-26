@@ -1,57 +1,52 @@
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ post.metadata.title }}</title>
-    <meta name="description" content="{{ post.metadata.description }}">
-    <meta name="author" content="{{ post.metadata.author }}">
-    <link rel="stylesheet" href="../css/matcha.css">
-</head>
-
-<body>
-    <header>
-        {% include "common/nav.html" %}
-    </header>
-    <main>
-        <article>
-            <header>
-                <h1>{{ post.metadata.title }}</h1>
-                <p>
-                    {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> • {% endif %}
-                    <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
-                </p>
-            </header>
-            {{ post.content | safe }}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ post.metadata.title }}</title>
+        <meta name="description" content="{{ post.metadata.description }}">
+        <meta name="author" content="{{ post.metadata.author }}">
+        <link rel="stylesheet" href="../css/matcha.css">
+    </head>
+    <body>
+        <header>
+            {% include "common/nav.html" %}
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h1>{{ post.metadata.title }}</h1>
+                    <p>
+                        {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> •{% endif %}
+                        <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
+                    </p>
+                </header>
+                {{ post.content | safe }}
+                <footer>
+                    <nav>
+                        <a href="index.html">
+                            {% if lang == "es" %}
+                                ← Volver al inicio
+                            {% elif lang == "en" %}
+                                ← Back to home
+                            {% elif lang == "ru" %}
+                                ← Назад на главную
+                            {% endif %}
+                        </a>
+                    </nav>
+                </footer>
+            </article>
+        </main>
+        <section>
             <footer>
-                <nav>
-                    <a href="index.html">
-                        {% if lang == "es" %}
-                        ← Volver al inicio
-                        {% elif lang == "en" %}
-                        ← Back to home
-                        {% elif lang == "ru" %}
-                        ← Назад на главную
-                        {% endif %}
-                    </a>
-                </nav>
-            </footer>
-        </article>
-    </main>
-    <footer>
-        <p>
-            <small>
                 {% if lang == "es" %}
-                Blog multilingüe generado con Polysite
+                    Blog multilingüe generado con Polysite
                 {% elif lang == "en" %}
-                Multilingual blog powered by Polysite
+                    Multilingual blog powered by Polysite
                 {% elif lang == "ru" %}
-                Многоязычный блог на Polysite
+                    Многоязычный блог на Polysite
                 {% endif %}
-            </small>
-        </p>
-    </footer>
-</body>
-
+            </footer>
+        </section>
+    </body>
 </html>

@@ -31,9 +31,6 @@ struct Post {
 struct IndexContent {
     page_title: String,
     meta_description: String,
-    heading: String,
-    subheading: String,
-    no_posts_message: String,
     read_more: String,
     footer_text: String,
 }
