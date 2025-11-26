@@ -42,6 +42,7 @@
             packages =
               shell.packages
               ++ [
+                pkgs.chromium
                 pkgs.qutebrowser
                 pkgs.antigravity
               ];
