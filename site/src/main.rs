@@ -3,7 +3,6 @@ use chrono::NaiveDate;
 use pulldown_cmark::{html, Options, Parser};
 use serde::{Deserialize, Serialize};
 use std::{
-    collections::HashMap,
     fs,
     path::{Path, PathBuf},
 };
@@ -26,6 +25,17 @@ struct Post {
     content: String,
     url: String,
     slug: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+struct IndexContent {
+    page_title: String,
+    meta_description: String,
+    heading: String,
+    subheading: String,
+    no_posts_message: String,
+    read_more: String,
+    footer_text: String,
 }
 
 const LANGUAGES: [&str; 3] = ["es", "en", "ru"];
@@ -118,6 +128,23 @@ fn extract_frontmatter(content: &str) -> Result<(PostMetadata, String)> {
     Ok((metadata, parts[2].trim().to_string()))
 }
 
+fn load_index_content(lang: &str) -> Result<IndexContent> {
+    let path = PathBuf::from("content").join(lang).join("index.md");
+    let content = fs::read_to_string(&path)
+        .with_context(|| format!("Failed to read {:?}", path))?;
+    
+    let parts: Vec<&str> = content.splitn(3, "---").collect();
+    
+    if parts.len() < 2 {
+        anyhow::bail!("Invalid frontmatter format in index.md");
+    }
+
+    let index_content: IndexContent = serde_json::from_str(parts[1].trim())
+        .context("Failed to parse index.md frontmatter")?;
+    
+    Ok(index_content)
+}
+
 fn render_post(tera: &Tera, lang: &str, post: &Post, output_dir: &Path) -> Result<()> {
     let mut context = TeraContext::new();
     context.insert("post", post);
@@ -139,15 +166,17 @@ fn render_index(tera: &Tera, lang: &str, posts: &[Post], output_dir: &Path) -> R
     let mut sorted_posts = posts.to_vec();
     sorted_posts.sort_by(|a, b| b.metadata.date.cmp(&a.metadata.date));
 
+    let content = load_index_content(lang)?;
+
     let mut context = TeraContext::new();
     context.insert("posts", &sorted_posts);
     context.insert("lang", lang);
     context.insert("languages", &LANGUAGES);
+    context.insert("content", &content);
 
-    let template_name = format!("{}/index.html", lang);
     let html = tera
-        .render(&template_name, &context)
-        .with_context(|| format!("Failed to render {}", template_name))?;
+        .render("index.html", &context)
+        .with_context(|| format!("Failed to render index for {}", lang))?;
 
     let output_path = output_dir.join("index.html");
     fs::write(&output_path, html)
@@ -181,24 +210,21 @@ fn copy_static_files() -> Result<()> {
     Ok(())
 }
 
-fn create_language_selector(tera: &Tera) -> Result<()> {
-    let lang_names: HashMap<&str, &str> = [
-        ("es", "Español"),
-        ("en", "English"),
-        ("ru", "Русский"),
-    ]
-    .iter()
-    .copied()
-    .collect();
+fn create_language_selector(_tera: &Tera) -> Result<()> {
+    let redirect_html = r#"<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=es/index.html">
+    <link rel="canonical" href="es/index.html">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redirecting to <a href="es/index.html">Spanish version</a>...</p>
+</body>
+</html>"#;
 
-    let mut context = TeraContext::new();
-    context.insert("languages", &LANGUAGES);
-    context.insert("lang_names", &lang_names);
-
-    let html = tera
-        .render("index.html", &context)
-        .context("Failed to render root index template")?;
-
-    fs::write("_site/index.html", html)?;
+    fs::write("_site/index.html", redirect_html)?;
     Ok(())
 }
+

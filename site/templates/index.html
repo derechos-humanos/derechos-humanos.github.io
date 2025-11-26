@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Language / Seleccionar idioma / Выберите язык</title>
-    <link rel="stylesheet" href="css/matcha.css">
+    <title>{{ content.page_title }}</title>
+    <meta name="description" content="{{ content.meta_description }}">
+    <link rel="stylesheet" href="../css/matcha.css">
 </head>
 
 <body>
     <header>
-        <h1>&#127482;&#127475;</h1>
-        <p>Human Rights Blog</p>
+        {% include "common/nav.html" %}
+        <h1>{{ content.heading }}</h1>
+        <p>{{ content.subheading }}</p>
     </header>
     <main>
+        {% if posts %}
         <section>
-            <h2>Select Language / Seleccionar idioma / Выберите язык</h2>
-            <nav>
-                <ul>
-                    {% for language in languages %}
-                    <li>
-                        <a href="{{ language }}/index.html">{{ lang_names[language] }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+            {% for post in posts %}
+            <article>
+                <header>
+                    <h2>
+                        <a href="{{ post.url }}">{{ post.metadata.title }}</a>
+                    </h2>
+                    <p>
+                        {% if post.metadata.author %}<strong>{{ post.metadata.author }}</strong> • {% endif %}
+                        <time datetime="{{ post.metadata.date }}">{{ post.metadata.date }}</time>
+                    </p>
+                </header>
+                {% if post.metadata.description %}
+                <p>{{ post.metadata.description }}</p>
+                {% endif %}
+                <footer>
+                    <a href="{{ post.url }}">{{ content.read_more }} →</a>
+                </footer>
+            </article>
+            {% endfor %}
         </section>
+        {% else %}
+        <p>{{ content.no_posts_message }}</p>
+        {% endif %}
     </main>
+    <footer>
+        <p><small>{{ content.footer_text }}</small></p>
+    </footer>
 </body>
 
 </html>
