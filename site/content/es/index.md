@@ -1,8 +1,7 @@
 ---
 {
-  "page_title": "Blog - Inicio",
-  "meta_description": "Blog multilingüe sobre derechos humanos",
+  "title": "Derechos Humanos",
+  "description": "Blog sobre derechos humanos",
   "read_more": "Leer más",
-  "footer_text": "Blog multilingüe generado con Polysite"
 }
 ---

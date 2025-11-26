@@ -29,10 +29,9 @@ struct Post {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct IndexContent {
-    page_title: String,
-    meta_description: String,
+    title: String,
+    description: String,
     read_more: String,
-    footer_text: String,
 }
 
 const LANGUAGES: [&str; 3] = ["es", "en", "ru"];
