@@ -1,4 +1,8 @@
 <footer class="centered muted">
+    <br>
+    {{ footer_qr | safe }}
+    <br>
+    <br>
     {% if lang == "es" %}
         © 2025 Derechos Humanos • <a href="https://derechos-humanos.github.io">derechos-humanos.github.io</a>
     {% elif lang == "ru" %}
@@ -6,7 +10,4 @@
     {% else %}
         © 2025 Human Rights • <a href="https://derechos-humanos.github.io">derechos-humanos.github.io</a>
     {% endif %}
-    <br>
-    <br>
-    {{ footer_qr | safe }}
 </footer>
