@@ -49,6 +49,16 @@
           });
         packages = rec {
           site = mkRustPkg "site";
+          docs = pkgs.writeShellApplication {
+            name = "docs";
+            text = ''
+              cd site
+              cargo run
+              cd ..
+              rm -rf docs
+              cp -r site/_site docs
+            '';
+          };
           default = self.packages.${system}.site;
         };
       }
