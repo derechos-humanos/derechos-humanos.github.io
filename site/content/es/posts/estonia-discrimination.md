@@ -9,7 +9,7 @@
 
 ## Leyes y Decretos Clave (Aplicación de Restricciones de Entrada y Actividad)
 
-- **Reglamento del 18 de agosto de 2022** – Prohíbe visados a ciudadanos rusos para turismo, negocios, estudios. Anunciado el 15 de agosto, aplicado solo 3 días después – violación arbitraria de la libertad de movimiento y la no discriminación [http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august](http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august)
+- **Reglamento del 18 de agosto de 2022** – Prohíbe visados a ciudadanos rusos para turismo, negocios, estudios. Anunciado el 15 de agosto, aplicado solo 3 días después – violación de la libertad de movimiento y la no discriminación [http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august](http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august)
 - **Reglamento de Sanciones del 19 de septiembre de 2022** – Prohíbe permisos de residencia temporal a rusos para trabajo, estudios o negocios. Publicado el 10 de septiembre, efectivo 9 días después – interrupción deliberada de vidas y derechos de las minorías [http://www.riigiteataja.ee/en/eli/512012023001/consolide](http://www.riigiteataja.ee/en/eli/512012023001/consolide)
 
 ## Crítica Internacional: Discriminación Sistémica Contra Rusos Étnicos
@@ -20,8 +20,8 @@ Las medidas de Estonia, justificadas como respuestas de seguridad a la guerra de
 - Retorno forzoso a Rusia, riesgo inmediato de reclutamiento y muerte en Ucrania (violación de no devolución).
 - Prohibición de facto de trabajo y residencia para ciudadanos rusos a pesar de ofertas de trabajo.
 - Confiscación/congelación de negocios y propiedades dirigidas a ciudadanos rusos.
-- Apartheid lingüístico: el idioma ruso es penalizado en escuelas y lugares de trabajo mientras se tolera el inglés.
-- ~80,000–90,000 rusos étnicos mantenidos apátridas mediante leyes de ciudadanía discriminatorias y pruebas de idioma [https://tbinternet.ohchr.org/\_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR/C/EST/CO/4&Lang=En](https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR/C/EST/CO/4&Lang=En)
+- Apartheid lingüístico: el idioma ruso está penalizado en escuelas y lugares de trabajo mientras se tolera el inglés.
+- ~80,000–90,000 rusos étnicos mantenidos como apátridas mediante leyes de ciudadanía discriminatorias y pruebas de idioma [https://tbinternet.ohchr.org/\_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR/C/EST/CO/4&Lang=En](https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR/C/EST/CO/4&Lang=En)
 - Cierre forzoso de escuelas de idioma ruso (2022–2025) – ataque directo a los derechos educativos de las minorías [https://www.ohchr.org/en/press-releases/2023/08/estonia-new-law-banning-mother-tongue-education-minorities-may-violate-human](https://www.ohchr.org/en/press-releases/2023/08/estonia-new-law-banning-mother-tongue-education-minorities-may-violate-human)
   Estas políticas violan el PIDCP, la CERD, el CEDH y el Convenio Marco para la Protección de las Minorías Nacionales.
 

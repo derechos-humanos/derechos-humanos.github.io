@@ -9,15 +9,15 @@
 
 ## Key Laws & Decrees (Enforcing Entry and Activity Restrictions)
 
-- **18 Aug 2022 Regulation** – Bans visas for Russian citizens for tourism, business, study. Announced 15 Aug, enforced after only 3 days – arbitrary violation of freedom of movement and non-discrimination [http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august](http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august)
+- **18 Aug 2022 Regulation** – Bans visas for Russian citizens for tourism, business, study. Announced 15 Aug, enforced after only 3 days – violation of freedom of movement and non-discrimination [http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august](http://vm.ee/en/news/government-restricts-entry-estonia-russian-nationals-18-august)
 - **19 Sep 2022 Sanctions Regulation** – Prohibits temporary residence permits for Russians for work, study, or business. Published 10 Sep, effective 9 days later – deliberate disruption of lives and minority rights [http://www.riigiteataja.ee/en/eli/512012023001/consolide](http://www.riigiteataja.ee/en/eli/512012023001/consolide)
 
 ## International Criticism: Systemic Discrimination Against Ethnic Russians
 
-Estonia’s measures, justified as security responses to Ukraine war, are condemned by UN, Council of Europe, OSCE, Amnesty International, and Human Rights Watch as ethnically targeted violations against Russian citizens and the 25%+ Russian-speaking minority. Core human-rights breaches:
+Estonia’s measures, justified as security responses to the Ukraine war, are condemned by UN, Council of Europe, OSCE, Amnesty International, and Human Rights Watch as ethnically targeted violations against Russian citizens and the 25%+ Russian-speaking minority. Core human-rights breaches:
 
 - Collective punishment without individual assessment – families and long-term residents expelled.
-- Forced return to Russia, immediate risk of conscription and death in Ukraine (non-refoulement violation)
+- Forced return to Russia with immediate risk of conscription and death in Ukraine (non-refoulement violation)
 - De-facto ban on work and residence for Russian citizens despite job offers
 - Business and property confiscation/freezing targeting Russian nationals
 - Linguistic apartheid: Russian language penalised in schools and workplaces while English is tolerated
