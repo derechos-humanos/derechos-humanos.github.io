@@ -33,3 +33,24 @@ These mechanisms effectively remove voluntary choice and create conditions of co
 ## Status of Partial Mobilization
 
 No presidential decree terminating the partial mobilization announced on 21 September 2022 has been issued as of 22 November 2025. Discharge of mobilized personnel occurs only on individual grounds (reaching maximum age, serious health condition, or presidential decision). No general demobilization order exists.
+
+## Russian Military Conflicts (1991-Present)
+
+Since the formation of the Russian Federation in 1991, Russia has participated in numerous military conflicts, often officially designated as "special operations" or "anti-terrorist operations" rather than wars. These conflicts have resulted in the deployment of Russian military forces and the conscription or mobilization of Russian citizens:
+
+- **First Chechen War (1994-1996)** – Military intervention to prevent Chechen independence. Resulted in de facto Chechen independence until 1999.
+
+- **War of Dagestan (1999)** – Military response to incursion by Chechen militants into Dagestan, which triggered the Second Chechen War.
+
+- **Second Chechen War (1999-2009)** – Officially designated as an "anti-terrorist operation." Major combat operations ended in 2000, but insurgency continued until 2009.
+
+- **Russo-Georgian War (2008)** – Five-day war in August 2008. Officially designated as a "special peace enforcement operation." Resulted in Russian recognition of Abkhazia and South Ossetia independence.
+
+- **Russian Military Intervention in Syria (2015-2024)** – Military intervention beginning 30 September 2015 in support of the Syrian government. Involved extensive airstrikes, special operations forces, and military advisors. Russian forces began withdrawal after the fall of the Assad regime in December 2024.
+
+- **Russo-Ukrainian War (2014-present)** – Ongoing conflict consisting of:
+  - Annexation of Crimea (February-March 2014)
+  - War in Donbas (2014-2022) – Support for separatist forces in eastern Ukraine
+  - Full-scale invasion (24 February 2022-present) – Officially designated as a "special military operation"
+
+All of these conflicts have involved the deployment of Russian military personnel, with many requiring conscription, contract service, or mobilization of reservists. The current partial mobilization decree remains in effect specifically for the ongoing conflict in Ukraine.
