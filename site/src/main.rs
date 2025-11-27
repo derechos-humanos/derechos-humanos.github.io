@@ -137,7 +137,7 @@ fn extract_frontmatter(
     Ok((metadata, parts[2].trim().to_string()))
 }
 
-const QR_SIZE: usize = 160;
+const QR_SIZE: usize = 90;
 
 fn generate_qr_svg(url: &str) -> Result<String> {
     let code = QrCode::new(url.as_bytes())
