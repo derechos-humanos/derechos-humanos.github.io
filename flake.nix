@@ -53,6 +53,7 @@
             name = "docs";
             text = ''
               cd site
+              rm -rf _site
               cargo run
               cd ..
               rm -rf docs
